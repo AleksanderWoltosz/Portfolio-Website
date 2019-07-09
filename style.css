@@ -1,0 +1,920 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS 1 - LANDING PAGE */
+body{
+    overflow-x: hidden;
+}
+.page1Wrapper{
+  height: 100vh;
+}
+
+header{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: 0px solid white;
+    height: 90vh;
+    width: 90vw;
+    -webkit-box-shadow: 0px 0px 45px 7px rgba(179,163,179,1);
+    -moz-box-shadow: 0px 0px 45px 7px rgba(179,163,179,1);
+    box-shadow: 0px 0px 40px 5px rgba(179,163,179,1);
+}
+
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 8vh;
+}
+
+.logo{
+    margin-right: auto;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    padding-left: 3%;
+    font-weight: lighter;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width:55%;
+    list-style: none;
+}
+nav-links li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.nav-links a{
+    font-size: 14px;
+    color: #371E30;
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+    border-bottom: solid black 1px;
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: .3s;  
+}
+
+h2.hello{
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-weight: normal;
+    width: 80%;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+ h2.hello span{
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+.arrow{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.arrow div{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: arrow 2s infinite;
+    cursor: pointer;
+}
+
+.topSvg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    z-index: -1;
+}
+.bottomSvg{
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+    width: 45%;
+    z-index: -1;
+}
+
+p.getToKnowMe{
+    position: absolute;
+    top: calc(90% - 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    padding: 4px 6px;
+    border: 0px solid white;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(179,170,179,1);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(179,170,179,1);
+    box-shadow: 0px 0px 3px 0px rgba(179,170,179,1);
+    cursor: pointer;
+}
+
+/* about me section */
+section.about{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center;
+  min-height: 100vh;
+  max-width: 80%;
+  margin: 0 auto;
+  /* background-color: black; */
+}
+
+section.about h2{
+ font-size: 22px;
+ font-weight: normal; 
+}
+
+section.about h2 span{
+  font-weight: bold;
+  border-bottom: 1px solid #342E37;
+}
+
+section.about .aboutMe{
+   font-size: 16px;
+   text-align: center;
+  
+}
+
+section.about .technologies{
+    font-size: 16px;
+    margin-bottom: 1%;
+}
+section.about .technologies span{
+ color: #FAFFFD;;
+ border: 1px solid #FA824C;
+ border-radius: 5px;
+ background: #FA824C;
+ padding: 4px 6px;
+ transition: .2s;
+}
+section.about .technologies span:hover{
+ color: #342E37;
+}
+
+
+section.about img{
+    height: auto;
+    width: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section.about .img-container{
+ display:flex;
+ justify-content: center;
+ width:100%;
+}
+
+
+section.about p.projects{
+ font-size: 18px;
+}
+
+section.about p.projects a{
+ display: inline-block;
+ color: #FAFFFD;
+ background: #3C91E6;
+ border: 1px solid #3C91E6;
+ border-radius: 5px;
+ margin-left: 3px;
+ padding: 4px 6px;
+ cursor: pointer;
+ text-decoration: none;
+ transition: .3s;
+}
+
+section.about p.projects a:hover{
+ color: #342E37;
+}
+
+/* CSS 2 - COtact section */
+
+section.contact{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+ min-height: 100vh;
+ width: 100vw;
+ font-family: 'Ubuntu', sans-serif;
+}
+
+section.contact img{
+ position: absolute;
+ top:0;
+ left:0;
+ width: 0;
+ z-index: -1;
+}
+section.contact .form-wrapper{
+ max-width: 1300px;
+ width: auto;
+ margin: 50px auto;
+ padding: 40px 40px 15px 40px;
+ background: #6465a5;
+}
+
+section.contact h1{
+ margin-bottom: 5%;
+ text-align: center;
+ text-transform: uppercase;
+ color: #FAFFFD;
+ font-size: 22px;
+ letter-spacing: 1px;
+}
+
+section.contact .address{
+ display: flex;
+ justify-content: space-around;
+ text-align: center;
+ color: rgba(218, 223, 225, 1);
+ margin-bottom: 5%;
+ width: 100%;
+}
+
+section.contact .inner-address p{
+ font-size: 14px;
+}
+
+section.contact .inner-address .fas{
+ font-size: 30px;
+ margin-bottom: 10px;
+ transition: .3s;
+}
+
+section.contact .inner-address .fas:hover{
+ color: #FAFFFD;
+}
+
+.form-title{
+ font-size: 22px;
+ margin-bottom: 4%;
+ color: #FAFFFD;
+ text-align: center;
+ letter-spacing: 1px;
+}
+
+div.leaveMessage{
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.input-wrapper{
+ display: flex;
+ justify-content: space-between;
+ 
+}
+.input-wrapper input{
+ width: 35%;
+ padding: 5px;
+ font-size: 14px;
+ text-align: center;
+ margin-bottom: 3%;
+}
+
+textarea.message{
+ height: auto;
+ margin-bottom: 2%;
+ font-size: 14px;
+ padding: 10px;
+}
+
+.button-wrapper{
+ display: flex;
+ justify-content: center;
+ width:100%;
+}
+button.submitForm{
+ margin-top: 1%;
+ margin-bottom: 6%;
+ font-size: 18px;
+ border: 2px solid #FAFFFD;
+ border-radius: 4px;
+ background: #6465a5;
+ padding: 8px 14px;
+ color: #FAFFFD;
+ letter-spacing: 1px;
+ cursor:pointer;
+ transition: .3s ease;
+}
+
+.submitForm:hover{
+color: #6465a5;
+background: #FAFFFD;
+}
+
+div.hate-social{
+ display:flex;
+ justify-content: center;
+ color: #a9aacd;
+}
+
+.hate-social i{
+ font-size: 30px;
+ margin-right: 20px;
+ cursor: pointer;
+ transition: .3s;
+}
+
+.hate-social i:hover{
+ color: #FAFFFD;
+}
+
+/* CSS3 PROJECTS PORTFOLIO */
+
+.projects-wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+section.projects{
+    min-height: 100vh;
+    max-width: 1920px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.projects h1{
+    margin-top: 7%;
+    padding: 20px 30px;
+    text-align: center;
+    color: #FAFFFD;
+    background: #D8374C;
+    letter-spacing: 1px;
+    margin-bottom: 3%;
+}
+section.projects img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .35s, filter .5s ease-in-out;
+    filter: grayscale(100%);
+    overflow: hidden;
+}
+
+section.projects img:hover{
+    filter: grayscale(0);
+    /* transform: scale(1.1); */
+  }
+
+section.projects .title{
+    display:block;
+    margin-top: 1%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+} 
+
+section.projects .description{
+    text-align: center;
+    margin-top: 1%;
+    padding: 0 10px;
+}
+
+section.projects .git-wrapper{
+    text-align: center;
+}
+
+section.projects .git-wrapper a{
+    font-size: 14px;
+    color: #342E37;
+    text-decoration: none;
+    /* margin-right: 5px; */
+    margin: 0 5px;
+    border-bottom: #342E37 1px solid;
+    cursor: pointer;
+    transition: .3s;
+}
+
+section.projects .git-wrapper a:hover{
+    color: #3C91E6;
+    border-bottom: #3C91E6 1px solid;
+}
+
+section.projects #git{
+    font-size: 22px;
+}
+section.projects #eye{
+    font-size: 20px;
+}
+
+section.projects .website{
+    padding-bottom: 15px;
+    margin-bottom: 6%;
+    border: #342E37 0px solid;
+    -webkit-box-shadow: 11px 0px 3px 4px rgba(52,46,55,1);
+    -moz-box-shadow: 11px 0px 3px 4px rgba(52,46,55,1);
+    box-shadow: 0px 0px 17px 0px rgba(52,46,55,1);
+}
+
+div.concept-websites, div.web-apps, div.mini-games{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    max-width: 1200px;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+
+div.concept-websites h2, div.web-apps h3, div.mini-games h4{
+    font-size: 22px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FAFFFD;
+    background: #3C91E6;
+    letter-spacing: 1px;
+}
+
+div.web-apps h3{
+    color: #FAFFFD;
+    background:#FA824C;
+}
+div.mini-games h4{
+    color: #FAFFFD;
+    background: #3C91E6;
+}
+
+button.go-back{
+margin-bottom: 2%;
+font-size: 16px;
+ color: #FAFFFD;
+ background: #D8374C;
+ border: 1px solid #D8374C;
+ border-radius: 5px;
+ padding: 4px 6px;
+ cursor: pointer;
+ transition: .3s;
+}
+
+button.go-back:hover{
+    color: #342E37;
+}
+
+
+
+/* ANIMATIONS */
+.arrow div:nth-child(2){
+    animation-delay: .2s;
+}
+.arrow div:nth-child(3){
+    animation-delay: .4s;
+}
+@keyframes arrow{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-10px, -10px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+  }
+
+
+
+/* RWD MEDIA QUERIES */
+
+  @media (min-width: 575px){
+
+    /* about me */
+
+    .logo{
+        font-size: 16px;
+    }
+    .nav-links a{
+        font-size: 16px;
+    }
+    h2.hello{
+        font-size: 20px;
+    }
+    
+    h2.hello span{
+        font-size: 17px;
+    }
+    
+    section.about h2{
+    font-size: 24px;
+    }
+    
+    section.about .aboutMe{
+        font-size: 18px;
+    }
+    
+    section.about .technologies{
+        font-size: 18px;
+    }
+    
+    section.about img{
+        width: 50px;
+    }
+    
+    section.about p.projects{
+        font-size: 18px;
+    }
+    
+    /* contact */
+
+    section.contact .form-wrapper{
+        min-width: 500px;
+       }
+
+       section.contact h1{
+        Font-size: 24px;
+        }
+        
+        section.contact .inner-address p{
+        Font-size: 17px;
+        }
+        
+        section.contact .inner-address .fas{
+        Font-size: 33px;
+        }
+        
+        .form-title{
+        Font-size: 24px;
+        }
+        
+        div.leaveMessage{
+            font-size: 18px;
+        }
+        
+        .input-wrapper input{
+            font-size: 16px;
+        }
+        
+        textarea.message{
+        Font-size: 16px;
+        }
+        
+        button.submitForm{
+        Font-size: 18px;
+        }
+        
+        .hate-social i{
+        Font-size: 32px;
+        }
+    
+   
+
+    .projects-wrapper li a{
+        font-size: 19px;
+    } 
+}
+
+
+@media (min-width: 768px){
+
+/* about me */
+.logo{
+    font-size: 18px;
+}
+.nav-links a{
+    font-size: 18px;
+}
+
+h2.hello{
+    font-size: 22px;
+}
+
+h2.hello span{
+    font-size: 18px;
+}
+
+section.about h2{
+font-size: 24px;
+}
+
+section.about .aboutMe{
+    font-size: 20px;
+}
+
+section.about .technologies{
+    font-size: 20px;
+}
+
+section.about img{
+    width: 60px;
+}
+
+section.about p.projects{
+    font-size: 20px;
+}
+
+/* contact */
+
+section.contact .form-wrapper{
+    min-width: 730px;
+}
+
+section.contact h1{
+    Font-size: 26px;
+    }
+    section.contact .inner-address p{
+    Font-size: 19px;
+    }
+    
+    section.contact .inner-address .fas{
+    Font-size: 35px;
+    }
+    
+    .form-title{
+    Font-size: 26px;
+    }
+    
+    div.leaveMessage{
+        font-size: 20px;
+    }
+    
+    .input-wrapper input{
+        font-size: 19px;
+    }
+    
+    textarea.message{
+    Font-size: 19px;
+    }
+    
+    button.submitForm{
+    Font-size: 22px;
+    }
+    
+    .hate-social i{
+    Font-size: 36px;
+    }
+
+/* projects */
+    section.projects h1{
+        font-size: 26px;
+    }
+
+    div.concept-websites h2, div.web-apps h3, div.mini-games h4{
+        font-size: 24px;
+    }
+
+    section.projects .title{
+       font-size: 20px;
+    } 
+    
+    section.projects .description{
+        font-size: 17px;
+    }
+        
+    section.projects .git-wrapper a{
+        font-size: 16px;
+    } 
+    section.projects .fab{
+        font-size: 22px;
+    }
+
+    button.go-back{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 769px){
+    .nav-links{
+        position: absolute;
+         /* 8vh  */
+         top: -9vh;
+        opacity: 0;
+        transition: all .3s ease-in;
+    }
+    .nav-active{
+        top: 8vh;
+        opacity: 1;
+    }
+    .burger{
+        display: block;
+    }
+
+    .toggle .line1{
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2{
+      opacity: 0;
+    }
+    .toggle .line3{
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media(min-width: 992px){
+    /* about section */
+    .topSvg{
+        width: 35%;
+    }
+
+    .bottomSvg{
+        width: 35%;
+        left: 65%;
+    }
+    
+    h2.hello{
+        font-size: 24px;
+        line-height: 35px;
+    }
+    
+    h2.hello span{
+        font-size: 21px;
+    }
+
+    #btnScroll{
+        font-size: 18px;
+    }
+    
+
+    section.about h2{
+        font-size: 27px;
+    }
+
+    section.about .aboutMe{
+        font-size: 22px;
+    }
+        
+    section.about .technologies{
+        font-size: 22px;
+    }
+
+    section.about img{
+        width: 65px;
+    }
+
+    /* contact */
+section.contact .form-wrapper{
+    min-width: 933px;
+}
+
+    section.contact h1{
+        Font-size: 27px;
+        }
+        section.contact .inner-address p{
+        Font-size: 19px;
+        }
+        
+        section.contact .inner-address .fas{
+        Font-size: 35px;
+        }
+        
+        .form-title{
+        Font-size: 26px;
+        }
+        
+        div.form-title{
+            font-size: 25px;
+        }
+        
+        .input-wrapper input{
+            font-size: 20px;
+        }
+        
+        textarea.message{
+        Font-size: 20px;
+        }
+        
+        button.submitForm{
+        Font-size: 24px;
+        }
+        
+        .hate-social i{
+        Font-size: 36px;
+        }
+
+    /* projects */
+    section.about p.projects{
+    font-size: 22px;
+    }
+  
+}
+
+@media (min-width: 1199px){
+    /* about */
+    .topSvg{
+        width: 27%;
+    }
+
+    .bottomSvg{
+        width: 27%;
+        left: 73%;
+    }
+
+    .logo{
+        font-size: 19px;
+    }
+    .nav-links a{
+        font-size: 19px;
+    }
+    h2.hello{
+        font-size: 25px;
+    }
+    
+    h2.hello span{
+        font-size: 22px;
+    }
+
+    #btnScroll{
+        font-size: 19px;
+    }
+    
+
+
+    section.about h2{
+        font-size: 30px;
+    }
+
+    section.about .aboutMe{
+        font-size: 24px;
+    }
+        
+    section.about .technologies{
+        font-size: 24px;
+    }
+
+    section.about img{
+        width: 70px;
+    }
+    section.about p.projects{
+    font-size: 24px;
+    }
+
+
+    /* contact */
+    section.contact .form-wrapper{
+        min-width: 1100px;
+    }
+    
+        section.contact .inner-address p{
+        Font-size: 23px;
+        }
+        
+        section.contact .inner-address .fas{
+        Font-size: 36px;
+        }
+        
+        div.form-title{
+            font-size: 26px;
+        }
+        
+        .input-wrapper input{
+            font-size: 21px;
+        }
+        
+        textarea.message{
+        Font-size: 21px;
+        width: 100%;
+        }
+        
+        button.submitForm{
+        Font-size: 28px;
+        }
+        
+        .hate-social i{
+        Font-size: 37px;
+        }
+
+}
