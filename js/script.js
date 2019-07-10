@@ -1,19 +1,27 @@
-//importing jump.js which is used in scrolling function
-import jump from './node_modules/jump.js/dist/jump.module.js';
-// ./node_modules/jump.js/dist/jump.module.js
+// $('button.go-back').on('click', function(e){
+//     $('.body,html').animate({
+//         scrollTop: 0
+//     }, 1000)
+// })
+
+// $('.btnScroll').on('click', function() {
+//     $('body,html').animate({
+//         scrollTop: $('#about-me').offset().top
+//     },800)
+// })
 
 //scrolling function
 const smoothScroll = ()=>{
-    const btns = document.querySelectorAll('.btnScroll');
-    const ProjectsBtn = document.querySelector('button.go-back');
-
-    btns.forEach(btn =>{
-        btn.addEventListener('click', ()=>{
-            jump('.about');
-        })
-    });
-    ProjectsBtn.addEventListener('click', ()=>{
-        jump('.navbar');
+    $('button.go-back').on('click', function(e){
+        $('.body,html').animate({
+            scrollTop: 0
+        }, 1000)
+    })
+    
+    $('.btnScroll').on('click', function() {
+        $('body,html').animate({
+            scrollTop: $('#about-me').offset().top
+        },800)
     })
 }
 
