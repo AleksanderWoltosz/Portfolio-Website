@@ -1,5 +1,5 @@
 //importing jump.js which is used in scrolling function
-import jump from '../node_modules/jump.js/dist/jump.module.js';
+import jump from './node_modules/jump.js/dist/jump.module.js';
 // ./node_modules/jump.js/dist/jump.module.js
 
 //scrolling function
