@@ -345,9 +345,12 @@ background: #FAFFFD;
 div.hate-social{
  display:flex;
  justify-content: center;
- color: #a9aacd;
 }
 
+.hate-social a{
+    color: #a9aacd;
+    text-decoration: none;
+}
 .hate-social i{
  font-size: 30px;
  margin-right: 20px;
@@ -357,6 +360,7 @@ div.hate-social{
 
 .hate-social i:hover{
  color: #FAFFFD;
+ text-decoration: none;
 }
 
 /* CSS3 PROJECTS PORTFOLIO */
